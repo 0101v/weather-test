@@ -8,9 +8,13 @@ export const PlaceComponent = styled.div`
     margin-top: 10px;
   }
 `
-export const City = styled.div`
+export const City = styled.input`
   font-size: 32px;
   text-align: right;
+  color: white;
+  background: transparent;
+  border: none;
+  outline: none;
   @media (max-width: 500px) {
     text-align: left;
   }

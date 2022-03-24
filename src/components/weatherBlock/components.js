@@ -23,6 +23,8 @@ export const TodayComponent = styled.div`
   width: 28%;
   @media (max-width: 500px) {
     width: 80%;
+    margin-top: -6vh;
+    margin-bottom: -6vh;
   }
   
 `
@@ -52,7 +54,7 @@ export const TommorowComponent = styled.div`
   flex-direction: column;
   align-items: unsafe center;
   @media (max-width: 500px) {
-    width: 25%;
+    width: 35%;
     flex-direction: row;
   }
   
@@ -61,7 +63,7 @@ export const TommorowComponent = styled.div`
 export const TommorowTitle = styled.div`
   background: #465366;
   border-radius: 10px;
-  width: 5vh;
+  width: 6vh;
   text-align: center;
   font-size: 2vh;
   
