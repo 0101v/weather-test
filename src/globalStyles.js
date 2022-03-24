@@ -8,10 +8,13 @@ export default createGlobalStyle`
   }
 
   body {
-    background: url('/images/17838.gif');
+    background: url('/images/1620065577.jpg');
     height: 90vh;
     background-size: cover;
     background-position: center;
+    @media (max-width: 500px) {
+      background: none;
+    }
   }
 
   #root {    

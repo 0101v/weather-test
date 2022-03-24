@@ -7,4 +7,8 @@ export const ContainerComponent = styled.div`
   height: 80vh;
   margin: 10vh 20vh;
   box-shadow: -3px 4px 46px 10px #000000;
+  @media (max-width: 500px) {
+    margin: 0;
+    height: 100%;
+  }
 `

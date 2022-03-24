@@ -11,6 +11,8 @@ export const Container = () => {
     <ContainerComponent>
       <Header/>
       <TodoList/>
+      <TodoList/>
+      <TodoList/>
       <WeatherBlock/>
     </ContainerComponent>
   )

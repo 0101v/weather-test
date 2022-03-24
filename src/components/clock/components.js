@@ -5,10 +5,11 @@ export const Wrapper = styled.div`
   color: white;
 `
 export const Block = styled.div`
-  
+  text-align: center;
 `
 export const Time = styled.span`
   font-size: 72px;
+  
   
 `
 export const TimeDay = styled.span`
