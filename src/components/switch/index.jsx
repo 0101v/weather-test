@@ -1,15 +1,20 @@
-import React from 'react'
+import React from 'react';
+import Switch from '@material-ui/core/Switch';
+import FormGroup from '@material-ui/core/FormGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
 
-import './style.css';
-
-export const Switch = () => {
-
+export default function FormControlLabelPosition() {
   return (
-    <label class="checkbox-ya">
-	    <input type="checkbox"/>
-	    <span class="checkbox-ya-switch">
-		    <span class="checkbox-ya-feature" data-label-on="C°" data-label-off="F°"></span>
-	    </span>
-    </label>
-  )
+    <FormControl component="fieldset" >
+      <FormGroup aria-label="position"  row>
+        <FormControlLabel
+          value="start"
+          control={<Switch color="default" />}
+          label="C <> F"
+          labelPlacement="bottom"
+        />
+      </FormGroup>
+    </FormControl>
+  );
 }

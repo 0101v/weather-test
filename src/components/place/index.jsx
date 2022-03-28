@@ -1,19 +1,25 @@
 import React from 'react'
-import { Switch } from '../switch'
+import Switch from '../switch'
+import { addPlaceInit } from '../../actions'
+import { useDispatch } from 'react-redux'
 
-import { PlaceComponent, City, Country } from './components'
+import { PlaceComponent, City, Country, SwitchBlock  } from './components'
 
 export const Place = () => {
+  const dispatch = useDispatch();
+  const [place, setPlace] = React.useState('')
 
-  const func = (e) => {
-    console.log(e.target.value)
+  const func = (even) => {
+    dispatch(addPlaceInit())
   }
 
   return (
     <PlaceComponent>
-      <City type="text" value={'Minsk'}  onChange={func} size='1' outline='none' autoFocus/>
+      <City type="text" value={place['city']} onChange={func} size='5' outline='none' autoFocus/>
       <Country>Belarus</Country>
-      <Switch />
+      <SwitchBlock>
+        <Switch />
+      </SwitchBlock>
     </PlaceComponent>
   )
 }

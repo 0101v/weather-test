@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 
-
 export const PlaceComponent = styled.div`
   color: white;
   user-select: none;
@@ -15,14 +14,25 @@ export const City = styled.input`
   background: transparent;
   border: none;
   outline: none;
-  @media (max-width: 500px) {
+  border-bottom: solid 1px white;
+  @media (max-width: 800px) {
     text-align: left;
   }
 `
 export const Country = styled.div`
   font-size: 18px;
   text-align: right;
-  @media (max-width: 500px) {
+  @media (max-width: 800px) {
     text-align: left;
+  }
+`
+export const SwitchBlock = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  margin-right: -20px;
+  @media (max-width: 800px) {
+    justify-content: flex-start;
+    margin-right: 0px;
+    margin-left: -25px;
   }
 `
