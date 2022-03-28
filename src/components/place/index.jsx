@@ -15,7 +15,7 @@ export const Place = () => {
 
   return (
     <PlaceComponent>
-      <City type="text" value={place['city']} onChange={func} size='5' outline='none' autoFocus/>
+      <City type="text" value={'City'} onChange={func} size='5' outline='none' autoFocus/>
       <Country>Belarus</Country>
       <SwitchBlock>
         <Switch />
