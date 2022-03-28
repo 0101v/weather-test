@@ -29,10 +29,8 @@ export const Country = styled.div`
 export const SwitchBlock = styled.div`
   display: flex;
   justify-content: flex-end;
-  margin-right: -20px;
   @media (max-width: 800px) {
     justify-content: flex-start;
     margin-right: 0px;
-    margin-left: -25px;
   }
 `

@@ -11,10 +11,9 @@ import axios from "axios";
 
 const API_URL_GEOLOCATION = 'https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708';
 
-export const axiosGeoLocationInstance = async () => {
-  const res = await axios(API_URL_GEOLOCATION);
-  const data = await res.data;
-  return data
+export const axiosGeoLocationInstance = () => {
+  axios.get(API_URL_GEOLOCATION);
+  
 }
 
 
