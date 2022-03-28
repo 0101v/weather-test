@@ -11,7 +11,7 @@ export const Place = () => {
 
   React.useEffect(() => {
     dispatch(fetchPlaceInit());
-  }, [])
+  },)
 
   const func = (even) => {
     console.log(even.target.value)
