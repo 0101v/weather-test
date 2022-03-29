@@ -14,10 +14,10 @@ export const Clock = () => {
   return (
     <Wrapper>
       <Block>
-        <Time>{info.time}</Time>
-        <TimeDay>{info.amPm}</TimeDay>
+        <Time>{info.time || ''}</Time>
+        <TimeDay>{info.amPm || ''}</TimeDay>
       </Block>
-      <Date>{`${info.today}, ${info.day}`}</Date>
+      <Date>{`${info.today || ''}, ${info.day || ''}`}</Date>
     </Wrapper>
   )
 }
