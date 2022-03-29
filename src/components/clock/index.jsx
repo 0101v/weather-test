@@ -1,16 +1,23 @@
 import React from 'react'
 
 import { Wrapper, Time, Date, Block, TimeDay } from './components'
+import { getFullDate } from '../../api'
 
 export const Clock = () => {
+  const [info, setInfo] = React.useState('')
+  setInterval(() => {
+    setInfo(getFullDate())
+  }, 1000)
+  
+
 
   return (
     <Wrapper>
       <Block>
-        <Time>12:30</Time>
-        <TimeDay>PM</TimeDay>
+        <Time>{info.time}</Time>
+        <TimeDay>{info.amPm}</TimeDay>
       </Block>
-      <Date>Monday, 2 February 2022</Date>
+      <Date>{`${info.today}, ${info.day}`}</Date>
     </Wrapper>
   )
 }
