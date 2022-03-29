@@ -1,6 +1,6 @@
 import { put, takeEvery, call } from 'redux-saga/effects'
 import { FETCH_ADD_PLACE_INIT } from '../actions';
-import { axiosGeoLocationInstance, axiosTempInstance } from '../axios';
+import { axiosGeoLocationInstance } from '../axios';
 
 import { addPlaceInit } from '../actions'
 

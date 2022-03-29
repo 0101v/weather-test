@@ -11,7 +11,7 @@ export const Place = () => {
   const { city, country } = useSelector(store => store)
 
   React.useEffect(() => {
-    dispatch(fetchPlaceInit());
+    if (!city) dispatch(fetchPlaceInit());
   })
 
   const func = (even) => {
