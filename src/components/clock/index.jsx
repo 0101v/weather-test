@@ -4,10 +4,11 @@ import { Wrapper, Time, Date, Block, TimeDay } from './components'
 import { getFullDate } from '../../api'
 
 export const Clock = () => {
-  const [info, setInfo] = React.useState('')
+  const [info, setInfo] = React.useState(getFullDate())
+
   setInterval(() => {
     setInfo(getFullDate())
-  }, 1000)
+  }, 2000)
   
 
 
