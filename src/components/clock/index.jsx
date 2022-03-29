@@ -6,9 +6,9 @@ import { getFullDate } from '../../api'
 export const Clock = () => {
   const [info, setInfo] = React.useState(getFullDate())
 
-  // setInterval(() => {
-  //   setInfo(getFullDate())
-  // }, 5000)
+  setInterval(() => {
+    setInfo(getFullDate())
+  }, 5000)
   
 
 
