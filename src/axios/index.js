@@ -28,3 +28,5 @@ export const axiosWeatherInit = (lat, lon) => axiosTempInstance.get('data/2.5/on
     exclude: { query: false },
   },
 });
+
+export const findGeoLocation = (city) => axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=6f6e06ec8f255a3d6fbd8d98046f1d91`)
