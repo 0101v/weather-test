@@ -4,6 +4,11 @@ import FormGroup from '@mui/material/FormGroup';
 import Switch from '@mui/material/Switch';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { useSelector, useDispatch } from 'react-redux'
+import { chackedTemp } from '../../actions';
+import { ColorSpan } from './components'
+
+
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 28,
@@ -48,22 +53,24 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export default function CustomizedSwitches() {
-  const [checked, setChecked] = React.useState(false);
+  const dispatch = useDispatch();
+  const { checked } = useSelector(store => store)
+  // const [checked, setChecked] = React.useState(false);
 
   const handleChange = (event) => {
-    setChecked(event.target.checked);
+    dispatch(chackedTemp(event.target.checked)) ;
   };
 
   return (
     <FormGroup>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>C</Typography>
+        <Typography>{checked ? <ColorSpan>C</ColorSpan> : 'C' }</Typography>
         <AntSwitch 
           checked={checked}
           onChange={handleChange} 
           inputProps={{ 'aria-label': 'ant design' }} 
         />
-        <Typography>F</Typography>
+        <Typography>{checked ? 'F' : <ColorSpan>F</ColorSpan>}</Typography>
       </Stack>
     </FormGroup>
   );

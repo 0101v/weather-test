@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react'
 
 import { Wrapper, Time, Date, Block, TimeDay } from './components'
@@ -9,8 +10,6 @@ export const Clock = () => {
   setInterval(() => {
     setInfo(getFullDate())
   }, 5000)
-  
-
 
   return (
     <Wrapper>

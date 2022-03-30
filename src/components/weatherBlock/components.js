@@ -35,7 +35,7 @@ export const TodayImg = styled.img`
 export const TodayTitle = styled.div`
   background: #465366;
   border-radius: 10px;
-  width: 17vh;
+  width: 105%;
   text-align: center;
   font-size: 3vh;
   @media (max-width: 500px) {

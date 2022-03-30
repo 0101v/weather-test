@@ -29,7 +29,7 @@ export const Place = () => {
 
   return (
     <PlaceComponent>
-      <City type="text" value={cityState} onKeyUp={pressEnter} onChange={changeValue} size='5' outline='none' autoFocus/>
+      <City type="text" value={cityState} onKeyUp={pressEnter} onChange={changeValue} size='6' outline='none' autoFocus/>
       <Country>{country}</Country>
       <SwitchBlock>
         <Switch />

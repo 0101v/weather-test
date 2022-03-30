@@ -2,7 +2,7 @@ import axios from "axios";
 import { setupCache } from 'axios-cache-adapter';
 
 //add City and Country
-const API_URL_GEOLOCATION = 'https://geolocation-db.com/json/d802faa0-10bd-11ec-b2fe-47a0872c6708';
+const API_URL_GEOLOCATION = `https://geolocation-db.com/json/${process.env.REACT_APP_GEOLOCATION_ID}`;
 export const axiosGeoLocationInstance = () => axios.get(API_URL_GEOLOCATION);
 
 //weather init
@@ -19,7 +19,7 @@ export const axiosWeatherInit = (lat, lon) => axiosTempInstance.get('data/2.5/on
   params: {
     lat: lat,
     lon: lon,
-    appid: '6f6e06ec8f255a3d6fbd8d98046f1d91',
+    appid: process.env.REACT_APP_WEATHER_ID,
     exclude: 'current,minutely,hourly,',
     units: 'metric',
   },
@@ -29,4 +29,5 @@ export const axiosWeatherInit = (lat, lon) => axiosTempInstance.get('data/2.5/on
   },
 });
 
-export const findGeoLocation = (city) => axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=6f6e06ec8f255a3d6fbd8d98046f1d91`)
+//find lat and lon
+export const findGeoLocation = (city) => axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${process.env.REACT_APP_WEATHER_ID}`)

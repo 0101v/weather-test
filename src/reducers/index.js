@@ -1,12 +1,13 @@
 // import { join } from 'redux-saga/effects'
 import { 
-  ADD_PLACE_INIT, CHANGE_PLACE
+  ADD_PLACE_INIT, CHANGE_PLACE, CHECKED_TEMP
 } from "../actions";
 
 const INITIAL_STATE = {
   city: '',
   country: '',
-  week: ''
+  week: '',
+  checked: false,
 }
 
 const getDataTemp = ({data}) => {
@@ -27,6 +28,8 @@ const weatherReducer = (state = INITIAL_STATE, {type, payload}) => {
       return {...state, city: payload['city'], country: payload['country_name'] ?? payload['country'], week: getDataTemp(payload['temp'])}
     case CHANGE_PLACE:
       return {...state, city: payload}
+    case CHECKED_TEMP:
+      return {...state, checked: payload}
   
     default:
       return state
