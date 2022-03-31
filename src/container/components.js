@@ -11,4 +11,17 @@ export const ContainerComponent = styled.div`
     margin: 0;
     height: 100%;
   }
+  @media (max-width: 1120px) {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
+  @media (max-height: 570px) {
+    margin: 0;
+    height: 100vh;
+  }
+  @media (max-height: 470px) {
+    margin: 0;
+    height: 470px;
+  }
 `

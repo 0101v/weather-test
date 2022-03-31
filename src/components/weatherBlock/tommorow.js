@@ -1,15 +1,17 @@
 import React from 'react'
 
 import { TommorowComponent, TommorowTitle, TommorowImg, TommorowTemp  } from './components'
-import day from '../../assets/day.svg'
+import { getDay } from '../../helpers'
+import { useSelector } from 'react-redux'
 
-export const Tommorow = () => {
+export const Tommorow = ({day, temp, icon}) => {
+  const { checked } = useSelector(store => store)
 
   return (
     <TommorowComponent>
-      <TommorowTitle>TUE</TommorowTitle>
-      <TommorowImg src={day}></TommorowImg>
-      <TommorowTemp>12°</TommorowTemp>
+      <TommorowTitle>{getDay(day)}</TommorowTitle>
+      <TommorowImg src={`http://openweathermap.org/img/wn/${icon}@2x.png`}></TommorowImg>
+      <TommorowTemp>{checked ? temp + 34 : temp}°</TommorowTemp>
     </TommorowComponent>
   )
 }
