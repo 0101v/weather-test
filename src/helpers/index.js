@@ -10,3 +10,18 @@ export const getDay = (num) => {
   }
   return obj[num]
 }
+
+export const imgRequest = (icon) => {
+  return `http://openweathermap.org/img/wn/${icon}@2x.png`
+}
+
+export const getDataTemp = ({data}) => {
+  const temp = data['daily'].map(el => {
+    return {
+      day: new Date(el.dt * 1000).getDay(),
+      temp: Math.round(el.temp.max),
+      icon: el.weather[0].icon,
+    }
+  });
+  return temp
+}

@@ -1,8 +1,9 @@
 import React from 'react'
 
-import { HeaderComponent } from './components'
+import { HeaderComponent, Wrapper } from './components'
 import { Clock } from '../clock'
 import { Place } from '../place'
+// import IconButtons from '../button'
 
 export const Header = () => {
   
@@ -10,7 +11,10 @@ export const Header = () => {
   return (
     <HeaderComponent>
       <Clock />
-      <Place />
+      {/* <Wrapper> */}
+        <Place />
+        {/* <IconButtons /> */}
+      {/* </Wrapper> */}
     </HeaderComponent>
   )
 }

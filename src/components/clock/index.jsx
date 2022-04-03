@@ -1,15 +1,22 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 
 import { Wrapper, Time, Date, Block, TimeDay } from './components'
-import { getFullDate } from '../../api'
+import { getFullDate } from '../../helpers/getDate'
+import { useSelector } from 'react-redux'
+
 
 export const Clock = () => {
-  const [info, setInfo] = React.useState(getFullDate())
+  const { timeZone } = useSelector(store => store)
+  const [info, setInfo] = useState(getFullDate())
 
-  setInterval(() => {
-    setInfo(getFullDate())
-  }, 5000)
+  useEffect(() => {
+    const interval = setInterval(() => {
+      
+      setInfo(getFullDate(timeZone))
+    }, 1000)
+    return () => clearInterval(interval)
+  },)
+  
 
   return (
     <Wrapper>
