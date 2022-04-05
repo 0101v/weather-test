@@ -1,5 +1,5 @@
 import { 
-  ADD_PLACE_INIT, CHANGE_PLACE, CHECKED_TEMP
+  ADD_PLACE_INIT, CHANGE_PLACE, CHECKED_TEMP, ADD_EMAIL
 } from "../actions";
 
 const INITIAL_STATE = {
@@ -7,7 +7,8 @@ const INITIAL_STATE = {
   country: '',
   week: '',
   checked: false,
-  timeZone: ''
+  timeZone: '',
+  email: ''
 }
 
 const weatherReducer = (state = INITIAL_STATE, {type, payload}) => {
@@ -18,7 +19,9 @@ const weatherReducer = (state = INITIAL_STATE, {type, payload}) => {
       return {...state, city: payload}
     case CHECKED_TEMP:
       return {...state, checked: payload}
-  
+    case ADD_EMAIL:
+      return {...state, email: payload}
+
     default:
       return state
   }

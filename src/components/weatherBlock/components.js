@@ -6,13 +6,11 @@ export const WeatherBlockComponent = styled.div`
   flex-direction: row;
   background: #282e3e;
   opacity: .8;
-  position: absolute;
-  bottom: 0px;
   width: 100%;
   align-items: center;
   user-select: none;
-  @media (max-width: 750px) {
-    position: static;
+  
+  @media (max-width: 800px) {
     flex-direction: column;
     margin-top: 7vh;
   }
@@ -68,7 +66,6 @@ export const TommorowComponent = styled.div`
   flex-direction: column;
   align-items: unsafe center;
   @media (max-width: 550px) {
-    width: 35%;
     flex-direction: row;
   }
 `

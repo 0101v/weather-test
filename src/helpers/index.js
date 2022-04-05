@@ -25,3 +25,7 @@ export const getDataTemp = ({data}) => {
   });
   return temp
 }
+
+export const conversionToFahrenheit = (temp) => {
+  return temp + 34
+}

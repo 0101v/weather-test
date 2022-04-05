@@ -36,7 +36,6 @@ export const SwitchBlock = styled.div`
 `
 export const Wrapper = styled.div`
   display: flex;
-  
   @media (max-width: 540px) and (max-height: 915px) {
     justify-content: space-between;
   }

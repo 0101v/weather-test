@@ -7,17 +7,24 @@ import rootSaga from './sagas'
 
 const sagaMiddleware = createSagaMiddleware()
 
-const persistedState = localStorage.getItem('reduxState') 
-                       ? JSON.parse(localStorage.getItem('reduxState'))
-                       : {}
+const persistedState = () => {
+  if (!localStorage.getItem('reduxState')) return {};
+
+  const obj = JSON.parse(localStorage.getItem("reduxState")),
+    timestamp = obj.timestamp,
+    now = Date.now();
+    
+  if (timestamp + (3600 * 1000) > now) return JSON.parse(localStorage.getItem('reduxState'));
+}
                        
 export const store = createStore(
   weatherReducer,
-  persistedState,
+  persistedState(),
   composeWithDevTools(applyMiddleware(sagaMiddleware)),
 )
 
 sagaMiddleware.run(rootSaga)
 store.subscribe(()=>{
-  localStorage.setItem('reduxState', JSON.stringify(store.getState()))
+  const objStore = {...store.getState(), timestamp: Date.now()}
+  localStorage.setItem('reduxState', JSON.stringify(objStore))
 })

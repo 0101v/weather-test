@@ -3,7 +3,7 @@ import React , { useState, useEffect } from 'react'
 import Switch from '../switch'
 import { fetchPlaceInit, changePlace, loadWeatherForPlace } from '../../actions'
 import { useSelector, useDispatch } from 'react-redux'
-import IconButtons from '../button'
+import { IconButtonsSearch } from '../buttons'
 
 import { PlaceComponent, City, Country, SwitchBlock, Wrapper  } from './components'
 
@@ -38,7 +38,7 @@ export const Place = () => {
             <Switch />
           </SwitchBlock>
         </div>
-        <IconButtons pressEnter={pressEnter}/>
+        <IconButtonsSearch pressEnter={pressEnter}/>
       </Wrapper>
     </PlaceComponent>
   )

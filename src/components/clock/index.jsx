@@ -7,13 +7,13 @@ import { useSelector } from 'react-redux'
 
 export const Clock = () => {
   const { timeZone } = useSelector(store => store)
-  const [info, setInfo] = useState(getFullDate())
+  const [info, setInfo] = useState(() => getFullDate())
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      
+    const interval = setInterval(() => { 
       setInfo(getFullDate(timeZone))
     }, 1000)
+    
     return () => clearInterval(interval)
   },)
   
