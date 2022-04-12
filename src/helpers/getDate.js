@@ -5,12 +5,14 @@ export const getFullDate = (timeZone) => {
     time: moment().format('h:mm'),
     amPm: moment().format('a'),
     today: moment().format('dddd'),
-    day: moment().format('LL') 
+    day: moment().format('LL'),
+    fullFormat: moment().format()
   };
   return {
     time: moment().tz(timeZone).format('h:mm'),
     amPm: moment().tz(timeZone).format('a'),
     today: moment().tz(timeZone).format('dddd'),
-    day: moment().tz(timeZone).format('LL') 
+    day: moment().tz(timeZone).format('LL'),
+    fullFormat: moment().tz(timeZone).format()
   }
 }

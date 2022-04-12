@@ -3,7 +3,7 @@ import { changePlace, LOAD_WEATHER_FOR_PLACE } from '../actions';
 import { axiosWeatherInit, findGeoLocation } from '../axios';
 
 import { addPlaceInit } from '../actions'
-import { getDataTemp } from '../helpers';
+import { getDataTemp } from '../helpers/getDataTemp';
 
 
 function* updateWeatherWorker() {
@@ -19,7 +19,7 @@ function* updateWeatherWorker() {
       city = name;
     }
     const temp = yield call(axiosWeatherInit, lat, lon)
-    yield put(addPlaceInit({city, country, week: getDataTemp(temp), timeZone: temp.data.timezone}))
+    yield put(addPlaceInit({city, country, week: getDataTemp(temp), timeZone: temp.data.timezone, outside: getDataTemp(temp)[0].icon}))
   }
 }
 

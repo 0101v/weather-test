@@ -11,3 +11,12 @@ export const HeaderComponent = styled.div`
     padding: 1vh 5vh;
   }
 `
+export const BlockLeft = styled.div`
+  display: flex;
+  flex-direction: column;
+`
+export const BlockRight = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`

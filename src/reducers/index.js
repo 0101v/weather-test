@@ -8,13 +8,14 @@ const INITIAL_STATE = {
   week: '',
   checked: false,
   timeZone: '',
-  email: ''
+  email: '',
+  outside: ''
 }
 
 const weatherReducer = (state = INITIAL_STATE, {type, payload}) => {
   switch (type) {
     case ADD_PLACE_INIT:
-      return {...state, city: payload['city'], country: payload['country_code'] ?? payload['country'], week: payload['week'], timeZone: payload.timeZone}
+      return {...state, city: payload['city'], country: payload['country_code'] ?? payload['country'], week: payload['week'], timeZone: payload['timeZone'], outside: payload['outside']}
     case CHANGE_PLACE:
       return {...state, city: payload}
     case CHECKED_TEMP:

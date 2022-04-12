@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ContainerComponent = styled.div`
-  background: url('/images/1025.jpg');
   background-size: cover;
   height: 80vh;
   margin: 10vh 20vh;
@@ -15,7 +14,7 @@ export const ContainerComponent = styled.div`
     margin-right: 0;
     width: 100%;
   }
-  @media (max-width: 750px) {
+  @media (max-width: 800px) {
     height: 100%;
   }
   @media (max-width: 550px) {

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const PlaceComponent = styled.div`
-  color: white;
   user-select: none;
   @media (max-width: 500px) {
     margin-top: 10px;
@@ -11,12 +10,16 @@ export const City = styled.input`
   font-size: 32px;
   text-align: right;
   color: white;
+  text-shadow: 1px 1px 1px #000;
   background: transparent;
   border: none;
   outline: none;
   border-bottom: solid 1px white;
   @media (max-width: 800px) {
     text-align: left;
+  }
+  @media (max-width: 500px) {
+    font-size: 24px;
   }
 `
 export const Country = styled.div`

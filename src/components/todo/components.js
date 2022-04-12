@@ -3,12 +3,8 @@ import styled from 'styled-components'
 export const TodoListComponent = styled.div`
   display: flex;
   justify-content: space-between;
-  color: white;
-  // padding-left: 5vh;
   width: 500px;
-  
   align-items: center;
-
   @media (max-width: 750px) {
     max-width: 490px;
     margin: auto;
@@ -20,21 +16,23 @@ export const TodoListComponent = styled.div`
     padding: 1vh;
     margin: auto;
   }
-  `
+`
+export const InfoBlock = styled.div`
+  display: flex;
+`
 export const Time = styled.div`
   background: #465366;
   border-radius: 10px;
   width: 45px;
   text-align: center;
-  display: inline-block;
-  
+  margin: auto;
 `
 export const Text = styled.div`
   margin-left: 10px;
-  display: inline-block;
   font-size: 18px;
   width: 350px;
   user-select: none;
+  margin-bottom: 5px;
   
   @media (max-width: 500px) {
     width: 170px;

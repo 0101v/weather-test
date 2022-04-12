@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { TommorowComponent, TommorowTitle, TommorowImg, TommorowTemp  } from './components'
-import { getDay } from '../../helpers'
+import { getDay } from '../../helpers/getDay'
 import { useSelector } from 'react-redux'
 import { imgRequest, conversionToFahrenheit } from '../../helpers'
 
