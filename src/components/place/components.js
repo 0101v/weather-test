@@ -34,3 +34,9 @@ export const SwitchBlock = styled.div`
     margin-right: 0px;
   }
 `
+export const Wrapper = styled.div`
+  display: flex;
+  @media (max-width: 540px) and (max-height: 915px) {
+    justify-content: space-between;
+  }
+`

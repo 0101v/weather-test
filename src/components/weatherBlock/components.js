@@ -4,15 +4,13 @@ import styled from 'styled-components'
 export const WeatherBlockComponent = styled.div`
   display: flex;
   flex-direction: row;
-  background: #323a4d;
+  background: #282e3e;
   opacity: .8;
-  position: absolute;
-  bottom: 0px;
   width: 100%;
   align-items: center;
   user-select: none;
-  @media (max-width: 500px) {
-    position: static;
+  
+  @media (max-width: 800px) {
     flex-direction: column;
     margin-top: 7vh;
   }
@@ -21,7 +19,7 @@ export const TodayComponent = styled.div`
   display: flex;
   color: white;
   width: 28%;
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     justify-content: center;
     width: 100%;
     margin-top: -5vh;
@@ -38,26 +36,25 @@ export const TodayTitle = styled.div`
   width: 105%;
   text-align: center;
   font-size: 3vh;
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     font-size: 2vh;
   }
   
 `
 export const TodayTemp = styled.div`
   font-size: 8vh;
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     font-size: 6vh;
     text-align: center;
   }
 `
 export const TodayBlock = styled.div`
-  margin: auto 0;
-  
+  margin: auto 0; 
 `
 export const TommorowBlock = styled.div`
   display: flex;
   width: 100%;
-  @media (max-width: 500px) {
+  @media (max-width: 550px) {
     width: 35%;
     flex-direction: column;
   }
@@ -68,12 +65,9 @@ export const TommorowComponent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: unsafe center;
-  @media (max-width: 500px) {
-    width: 35%;
+  @media (max-width: 550px) {
     flex-direction: row;
   }
-  
-  
 `
 export const TommorowTitle = styled.div`
   background: #465366;
@@ -86,8 +80,10 @@ export const TommorowTitle = styled.div`
   }
 `
 export const TommorowImg = styled.img`
-  width: 10vh;
-  
+  width: 100%;
+  @media (max-width: 550px) {
+    width: 10vh;
+  }
 `
 export const TommorowTemp = styled.div`
   font-size: 3vh;

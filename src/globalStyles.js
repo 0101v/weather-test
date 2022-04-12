@@ -13,7 +13,7 @@ export default createGlobalStyle`
     height: 90vh;
     background-size: cover;
     background-position: center;
-    @media (max-width: 500px) {
+    @media (max-width: 550px) {
       background: none;
     }
   }

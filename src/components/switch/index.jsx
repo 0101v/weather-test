@@ -7,8 +7,7 @@ import Typography from '@mui/material/Typography';
 import { useSelector, useDispatch } from 'react-redux'
 import { chackedTemp } from '../../actions';
 import { ColorSpan } from './components'
-
-
+import { temperatureCelsius, temperatureFahrenheit } from '../../constants';
 
 const AntSwitch = styled(Switch)(({ theme }) => ({
   width: 28,
@@ -55,22 +54,21 @@ const AntSwitch = styled(Switch)(({ theme }) => ({
 export default function CustomizedSwitches() {
   const dispatch = useDispatch();
   const { checked } = useSelector(store => store)
-  // const [checked, setChecked] = React.useState(false);
 
   const handleChange = (event) => {
-    dispatch(chackedTemp(event.target.checked)) ;
+    dispatch(chackedTemp(event.target.checked));
   };
 
   return (
     <FormGroup>
       <Stack direction="row" spacing={1} alignItems="center">
-        <Typography>{checked ? <ColorSpan>C</ColorSpan> : 'C' }</Typography>
+        <Typography>{checked ? <ColorSpan>{temperatureCelsius}</ColorSpan> : temperatureCelsius }</Typography>
         <AntSwitch 
           checked={checked}
-          onChange={handleChange} 
-          inputProps={{ 'aria-label': 'ant design' }} 
+          onChange={handleChange}
+          inputProps={{ 'aria-label': 'ant design' }}
         />
-        <Typography>{checked ? 'F' : <ColorSpan>F</ColorSpan>}</Typography>
+        <Typography>{checked ? temperatureFahrenheit : <ColorSpan>{temperatureFahrenheit}</ColorSpan>}</Typography>
       </Stack>
     </FormGroup>
   );
