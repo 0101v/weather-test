@@ -6,6 +6,8 @@ import {
   Dialog, DialogContent, DialogActions 
 } from '@mui/material';
 
+import { P } from './components'
+
 export const TodoDialogAdd = ({open, handleClose, inputTime, onChangeSelect, inputText, onChangeText, addTodo}) => {
 
   return (
@@ -23,7 +25,8 @@ export const TodoDialogAdd = ({open, handleClose, inputTime, onChangeSelect, inp
             sx={{
               display: 'flex',
               flexDirection: 'column',
-              m: 0,              
+              m: 0,
+              textShadow: 'none'             
             }}
           >
             <FormControl sx={{ m: -1}} >       
@@ -35,13 +38,13 @@ export const TodoDialogAdd = ({open, handleClose, inputTime, onChangeSelect, inp
                 label="Time"
                 onChange={onChangeSelect}
               >
-                <MenuItem value='08:00'>08:00</MenuItem>
-                <MenuItem value='10:00'>10:00</MenuItem>
-                <MenuItem value='12:00'>12:00</MenuItem>
-                <MenuItem value='14:00'>14:00</MenuItem>
-                <MenuItem value='16:00'>16:00</MenuItem>
-                <MenuItem value='18:00'>18:00</MenuItem>
-                <MenuItem value='20:00'>20:00</MenuItem>
+                <MenuItem value='08:00'><P>08:00</P></MenuItem>
+                <MenuItem value='10:00'><P>10:00</P></MenuItem>
+                <MenuItem value='12:00'><P>12:00</P></MenuItem>
+                <MenuItem value='14:00'><P>14:00</P></MenuItem>
+                <MenuItem value='16:00'><P>16:00</P></MenuItem>
+                <MenuItem value='18:00'><P>18:00</P></MenuItem>
+                <MenuItem value='20:00'><P>20:00</P></MenuItem>
               </Select>
               <TextField
                 variant="outlined"

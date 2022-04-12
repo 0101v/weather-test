@@ -5,16 +5,13 @@ export const TodoListComponent = styled.div`
   justify-content: space-between;
   width: 500px;
   align-items: center;
+  padding-right: 2px;
   @media (max-width: 750px) {
-    max-width: 490px;
+    width: 100%;
     margin: auto;
   }
   @media (max-width: 500px) {
-    padding-top: 2vh;
-    width: 100%;
-    min-width: 200px;
-    padding: 1vh;
-    margin: auto;
+    padding: 0;
   }
 `
 export const InfoBlock = styled.div`
@@ -32,10 +29,9 @@ export const Text = styled.div`
   font-size: 18px;
   width: 350px;
   user-select: none;
-  margin-bottom: 5px;
-  
+  margin-bottom: 5px;  
   @media (max-width: 500px) {
-    width: 170px;
+    width: 200px;
   }
 `
 export const Wrapper = styled.div`
@@ -64,6 +60,9 @@ margin-bottom: 1vh;
   margin: auto;
 }
 @media (max-width: 500px) {
-  max-width: 370px;
+  width: 100%;
 }
+`
+export const P = styled.p`
+  text-shadow: none;
 `
