@@ -52,7 +52,7 @@ margin-bottom: 1vh;
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #C1C1C1;
+  background: none;
 }
 ::-webkit-scrollbar-thumb {
   background-color: white;
