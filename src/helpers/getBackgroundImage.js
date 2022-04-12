@@ -10,7 +10,7 @@ import fog from '../assets/fog.jpg'
 
 export const getBackgroundImage = (outside, timeZone) => {
   const time = getFullDate(timeZone).fullFormat.match(/[0-9]+:/)[0].slice(0, 2)
-  if ((time == 23) || (6 > time)) return night;
+  if ((+time === 23) || (6 > time)) return night;
 
   switch (outside) {
     case '01d':
