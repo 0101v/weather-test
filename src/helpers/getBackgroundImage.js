@@ -2,7 +2,7 @@ import { getFullDate } from './getDate'
 
 export const getBackgroundImage = (outside, timeZone) => {
   const time = getFullDate(timeZone).fullFormat.match(/[0-9]+:/)[0].slice(0, 2)
-  if ((+time === 23) || (6 > time)) return '/night/1025.jpg';
+  if ((+time === 23) || (6 > time)) return '/images/night.jpg';
 
   switch (outside) {
     case '01d':
