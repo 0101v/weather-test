@@ -29,6 +29,7 @@ export const Text = styled.div`
   font-size: 18px;
   width: 350px;
   user-select: none;
+  word-break: break-all;
   margin-bottom: 5px;  
   @media (max-width: 500px) {
     width: 200px;

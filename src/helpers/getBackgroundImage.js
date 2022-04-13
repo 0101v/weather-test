@@ -1,34 +1,27 @@
 import { getFullDate } from './getDate'
-import night from '../assets/night.jpg'
-import imageDefault from '../assets/1025.jpg'
-import clearSky from '../assets/clearSky.jpg'
-import clouds from '../assets/clouds.jpg'
-import rain from '../assets/rain.jpg'
-import storm from '../assets/storm.jpg'
-import snow from '../assets/snow.jpg'
-import fog from '../assets/fog.jpg'
 
 export const getBackgroundImage = (outside, timeZone) => {
   const time = getFullDate(timeZone).fullFormat.match(/[0-9]+:/)[0].slice(0, 2)
-  if ((+time === 23) || (6 > time)) return night;
+  if ((+time === 23) || (6 > time)) return '/night/1025.jpg';
 
   switch (outside) {
     case '01d':
-      return clearSky;
+      return '/images/clearSky.jpg';
     case '02d':
     case '03d':
     case '04d':
-      return clouds;
+      return '/images/clouds.jpg';
     case '09d':
     case '10d':
-      return rain;
+      return '/images/rain.jpg';
     case '11d':
-      return storm;
+      return '/images/storm.jpg';
     case '13d':
-      return snow;
+      return '/images/snow.jpg';
     case '50d':
-      return fog;
+      return '/images/fog.jpg';
+      
     default:
-      return imageDefault
+      return '/images/1025.jpg'
   }
 }
