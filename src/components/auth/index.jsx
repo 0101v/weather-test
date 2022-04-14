@@ -15,7 +15,6 @@ const providers = {
 };
 const firebaseAppAuth = firebaseConfig.auth();
 
-
 const AuthComponent = ({ user, signOut, signInWithGoogle }) => {
   const dispatch = useDispatch();
 
@@ -28,7 +27,7 @@ const AuthComponent = ({ user, signOut, signInWithGoogle }) => {
       {
         user
           ? <p>Hello, {user.displayName}</p>
-          : <p>Please sign in</p>
+          : <p>Sign in to add a list</p>
       }
 
       {

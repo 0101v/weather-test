@@ -3,41 +3,36 @@ import styled from 'styled-components'
 export const TodoListComponent = styled.div`
   display: flex;
   justify-content: space-between;
-  color: white;
-  // padding-left: 5vh;
   width: 500px;
-  
   align-items: center;
-
+  padding-right: 2px;
   @media (max-width: 750px) {
-    max-width: 490px;
+    width: 100%;
     margin: auto;
   }
   @media (max-width: 500px) {
-    padding-top: 2vh;
-    width: 100%;
-    min-width: 200px;
-    padding: 1vh;
-    margin: auto;
+    padding: 0;
   }
-  `
+`
+export const InfoBlock = styled.div`
+  display: flex;
+`
 export const Time = styled.div`
   background: #465366;
   border-radius: 10px;
   width: 45px;
   text-align: center;
-  display: inline-block;
-  
+  margin: auto;
 `
 export const Text = styled.div`
   margin-left: 10px;
-  display: inline-block;
   font-size: 18px;
   width: 350px;
   user-select: none;
-  
+  word-break: break-all;
+  margin-bottom: 5px;  
   @media (max-width: 500px) {
-    width: 170px;
+    width: 200px;
   }
 `
 export const Wrapper = styled.div`
@@ -54,7 +49,7 @@ margin-bottom: 1vh;
   width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #C1C1C1;
+  background: none;
 }
 ::-webkit-scrollbar-thumb {
   background-color: white;
@@ -66,6 +61,9 @@ margin-bottom: 1vh;
   margin: auto;
 }
 @media (max-width: 500px) {
-  max-width: 370px;
+  width: 100%;
 }
+`
+export const P = styled.p`
+  text-shadow: none;
 `

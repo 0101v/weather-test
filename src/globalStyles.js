@@ -1,6 +1,8 @@
 import { createGlobalStyle } from 'styled-components'
 
+
 export default createGlobalStyle`
+  
   * {
     margin: 0;
     padding: 0;
@@ -9,12 +11,14 @@ export default createGlobalStyle`
   }
 
   body {
-    background: url('/images/1620065577.jpg');
+    background: url(${({image}) => image});
     height: 90vh;
     background-size: cover;
     background-position: center;
-    @media (max-width: 550px) {
-      background: none;
+    color: white;
+    text-shadow: 2px 1px 2px #000;
+    @media (max-width: 800px) {
+      height: 100%;
     }
   }
 
