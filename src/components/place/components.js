@@ -18,8 +18,8 @@ export const City = styled.input`
   background: transparent;
   border: none;
   outline: none;
-  animation:
-    ${blinkCaret} .5s step-end infinite;
+//   animation:
+//     ${blinkCaret} .5s step-end infinite;
   @media (max-width: 800px) {
     text-align: left;
   }
