@@ -1,9 +1,5 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 
-const blinkCaret = keyframes`
-  from, to { border-bottom: solid 1px #DCDCDC; }
-  50% { border-bottom: solid 1px white;}
-`
 export const PlaceComponent = styled.div`
   user-select: none;
   @media (max-width: 500px) {
@@ -18,8 +14,7 @@ export const City = styled.input`
   background: transparent;
   border: none;
   outline: none;
-//   animation:
-//     ${blinkCaret} .5s step-end infinite;
+  border-bottom: solid 1px white;
   @media (max-width: 800px) {
     text-align: left;
   }
